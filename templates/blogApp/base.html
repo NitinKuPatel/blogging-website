@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSpot</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <header>
+        <div class="blogspot">BlogSpot</div>
+        
+        
+        <img class="head-img" src="{% static 'images/img9.jpg' %}"alt="profile"/>
+
+    </header>
+    
+    
+  <nav
+    class="navbar navbar-expand-sm navbar-dark"
+    style="
+        background-color:
+            #366484;
+        
+    "
+  >
+    <a class="navbar-brand" href="/home/">Blogspot</a>
+    <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    ></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/myblog/">Add blogs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ContactUs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Registration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="dropdownId"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Dropdown</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Action 1</a>
+                    <a class="dropdown-item" href="#">Action 2</a>
+                </div>
+            </li>
+        </ul>
+        <form class="d-flex my-2 my-lg-0">
+            <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search"
+                style="background-color:rgb(244, 241, 237);" 
+            />
+            <button style="background-color:rgb(189, 161, 110); color:black;" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+            </button>
+        </form>
+    </div>
+  </nav>
+
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li
+            data-bs-target="#carouselId"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="First slide"
+        ></li>
+        <li
+            data-bs-target="#carouselId"
+            data-bs-slide-to="1"
+            aria-label="Second slide"
+        ></li>
+        <li
+            data-bs-target="#carouselId"
+            data-bs-slide-to="2"
+            aria-label="Third slide"
+        ></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img
+                src="{% static 'images/blog.jpg'%}"
+                class="w-100 d-block"
+                id="carouse-img"
+                alt="First slide"
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="{% static 'images/img3.jpg'%}"
+                class="w-100 d-block"
+                id="carouse-img"
+                alt="Second slide"
+            />
+        </div>
+        <div class="carousel-item">
+            <img
+                src="{% static 'images/imgblog.jpg' %}"
+                class="w-100 d-block"
+                id="carouse-img"
+                alt="Third slide"
+            />
+        </div>
+    </div>
+    <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselId"
+        data-bs-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselId"
+        data-bs-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+ 
+  
+   
+    {% block body_block %}
+
+    {% endblock %}
+    <div class="footer">
+
+        
+            <table align="center">
+             
+                <tr>
+                    <td><h5 className="heading5">Geographical</h5></td>
+                    <td><h5 className="heading5">Movies</h5></td>
+                    <td><h5 className="heading5">Book Now</h5></td>
+                </tr>
+                <tr>
+                    <td><h5 className="heading5">Business</h5></td>
+                    <td><h5 className="heading5">Philosophical</h5></td>
+                    <td><h5 className="heading5">Commerce</h5></td>
+                </tr>
+                <tr>
+                    <td><h5 className="heading5">Politics</h5></td>
+                    <td><h5 className="heading5">Technology</h5></td>
+                    <td><h5 className="heading5">Food</h5></td>
+                </tr>
+                <tr>
+                    <td><h5 className="heading5">Travel</h5></td>
+                    <td><h5 className="heading5">News</h5></td>
+                    <td><h5 className="heading5">Career</h5></td>
+                </tr>
+            </table>
+          
+
+        </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.7.1.min.map' %}"></script>
+    
+</body>
+</html>

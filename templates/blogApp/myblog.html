@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+{%extends 'blogApp/base.html'%}
+
+{% block body_block %}
+<form id="form"  method="POST" action="/blogdetail/{{val.id}}" style="border:5px">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

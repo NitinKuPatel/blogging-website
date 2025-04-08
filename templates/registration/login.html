@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'blogApp/base.html' %}
+
+{% block body_block%}
+<h1>Thanks for visiting our website</h1>
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" name="register" value="Login"/>
+    <a href="/register">Register</a>
+</form>
+
+{% endblock %}
